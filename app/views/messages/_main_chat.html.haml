@@ -1,0 +1,28 @@
+.chat-main
+  .chat-main__group-info
+    .chat-main__left-box
+      %p.group-name
+        test
+      %ul.member-name
+        Member : 
+        %li.member-list
+          nao
+    = link_to "#", class: "edit-btn" do
+      Edit
+  .chat-main__message-field
+    .message-box
+      .message-info
+        .user-name
+          nao
+        .post-time
+          2019/04/25/(sun)16:51:03
+      .message
+        おはよう！
+  .message-form
+    %form.form-contents
+      .input-box
+        %input.input-text{"placeholder": "type a message", "type": "text"}
+        %label{class: "input-box__image"}
+          = icon('fas', 'image')
+          %input{type: "file", class: "input-box__image-file"}
+        %input.submit-btn{"name": "commit", "type": "submit", "value": "Send"}

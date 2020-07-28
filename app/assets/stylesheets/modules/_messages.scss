@@ -1,0 +1,189 @@
+
+* {
+  box-sizing: border-box;
+}
+//フロント画面全体に対するコード
+.wrapper {
+  display: flex;
+}
+//サイド全体を構成するコード
+.side-bar {
+  width: 300px;
+  height: 100vh;
+  background-color: #253141;
+//以下左上ブロックに対するコード
+  &__user-name {
+    height: 100px;
+    background-color: #253141;
+    display: flex;
+    align-items: center;
+    .text-box {
+      height: 20px;
+      width: 260px;
+      margin: 0 20px;
+      display: flex;
+      justify-content: space-between;
+      .user-name {
+        width: calc(260px - 60px);
+        color: #ffffff;
+        font-size: 16px;
+      }
+      .icon {
+        width: 60px;
+      }
+      &__icon {
+        color: #ffffff;
+        padding-left: 5px;
+      }
+    }
+  }
+  //以下左下ブロックに対するコード
+  &__group-list{
+    height: calc(100vh - 100px);
+    background-color: #2f3e51;
+    .group-name {
+      color: #ffffff;
+      padding: 20px 20px 5px 20px;
+      font-size: 15px;
+    }
+    .message {
+      color: #ffffff;
+      padding: 0 20px 40px 20px;
+      font-size: 11px;
+    }
+  }
+  
+}
+//チャットメイン画面に対するコード
+.chat-main {
+  width: calc(100vw - 300px);
+  height: 100vh;
+  background-color: #ffffff;
+  //以下右上ブロックに対するコード
+  &__group-info{
+    height: 100px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #eeeeee;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 40px;
+    .group-name {
+      margin-top: 35px;
+      font-size: 20px;
+      color: #333333;
+    }
+    .member-name {
+      display: flex;
+      list-style: none;
+      color: #999999;
+      font-size: 12px;
+      margin-top: 15px;
+    } 
+    .member-list {
+      padding-left: 5px;
+    }
+    .edit-btn {
+      display: block;
+      height: 40px;
+      padding: 0 20px;
+      margin-top: 28px;
+      color: #38aef0;
+      border: 1px solid #38aef0;
+      text-decoration: none;
+      line-height: 40px;
+    }
+  }
+  //以下右真ん中ブロックに対するコード
+  &__message-field {
+    height: calc(100vh - 190px);
+    background-color: #fafafa;
+    padding: 35px 40px 0;
+    .message-box {
+      margin-bottom: 46px;
+      .message-info {
+        display: flex;
+        .user-name {
+          color: #333333;
+          font-size: 16px;
+          font-weight: bold;
+          padding-right: 10px;
+        }
+        .post-time {
+          font-size: 12px;
+          color: #999999;
+        }
+      }
+      .message {
+        font-size: 14px;
+        color: #434A54;
+        margin-top: 12px;
+      }
+    }
+  }
+
+  /*&__message-field {
+    height: calc(100vh - 190px);
+    background-color: #fafafa;
+    padding: 35px 40px 0;
+    &__message-box {
+      margin-bottom: 46px;
+      .message-info {
+        display: flex;
+        &__user-name {
+          color: #333333;
+          font-size: 16px;
+          font-weight: bold;
+        &__post-time {
+          font-size: 12px;
+          color: #999999;
+        }
+        }
+      }
+      .message {
+        font-size:14px;
+        color: #434A54;
+        margin-top: 12px;
+      }
+    }   
+  }*/
+
+  //以下右下のブロックに対するコード
+  .message-form {
+    height: 90px;
+    background-color: #d2d2d2;
+    display: flex;
+    .form-contents {
+      display: flex;
+      padding: 20px 40px;
+      width: 100%;
+      justify-content: space-between;
+      .input-box {
+        position: relative;
+        display: flex;
+        width: 100%;
+        .input-text {
+          height: 50px;
+          width: 100%;
+          border-style: none;
+          padding-left: 10px;
+        }
+        .input-box__image {
+          position: absolute;
+          top: 10px;
+          right: 130px;
+          .input-box__image-file {
+            display: none;
+          }
+      }
+        .submit-btn {
+          padding: 0 30px;
+          margin-left: 15px;
+          background-color: #38aef0;
+          color: #fff;
+          font-size: 16px;
+          border-style: none;
+        }
+      }
+    }
+  }
+}
